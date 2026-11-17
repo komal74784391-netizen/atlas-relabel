@@ -1,0 +1,5 @@
+dataset,budget,accuracy
+news,50,0.812
+news,100,0.847
+clinical,50,0.771
+clinical,100,0.803

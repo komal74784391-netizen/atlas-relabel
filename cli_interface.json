@@ -1,0 +1,44 @@
+{
+  "project": "atlas-relabel",
+  "manifest_version": "1",
+  "tools": [
+    {
+      "name": "atlas-annotate",
+      "description": "Launch an adaptive relabeling round on a batch.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "batch": {
+            "type": "string",
+            "description": "Batch identifier."
+          },
+          "budget": {
+            "type": "integer",
+            "description": "Annotation budget in labels."
+          },
+          "strategy": {
+            "type": "string",
+            "description": "Acquisition strategy name."
+          }
+        },
+        "required": [
+          "batch",
+          "budget"
+        ]
+      }
+    },
+    {
+      "name": "atlas-status",
+      "description": "Report progress of an ongoing relabeling batch.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "batch": {
+            "type": "string",
+            "description": "Batch identifier; omit to list all batches."
+          }
+        }
+      }
+    }
+  ]
+}
